@@ -12,7 +12,6 @@ export const useDebounce = (value, delay) => {
         // Clean up function 참고
         return () => {
             clearTimeout(handler);
-            console.log("clear TimeOut");
         }
     }, [value, delay]);
 
