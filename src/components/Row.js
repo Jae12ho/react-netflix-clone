@@ -1,9 +1,10 @@
 import axios from '../api/axios';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Row.css";
 import MovieModal from './MovieModal';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
+import "swiper/css/bundle";
 
 export default function Row({ isLargeLow, title, id, fetchUrl }) {
 
