@@ -33,14 +33,26 @@ export default function Row({ isLargeLow, title, id, fetchUrl }) {
       <Swiper 
         className="slider"
         modules={[Navigation]}
-        navigation={{
-          prevEl: '.slider__arrow-left',
-          nextEl: '.slider__arrow-right',
-        }}
-        slidesPerView={5}>
-        <div className="slider__arrow-left">
-          <span className="arrow">{"<"}</span>
-        </div>
+        navigation
+        loop={true}
+        breakpoints={{
+          1378: {
+            slidesPerView: 6,
+            slidesPerGroup: 6,
+          },
+          998: {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+          },
+          625: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+          },
+          0: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+          },
+        }}>
         <div id={id} className="row__posters">
           {movies.map(movie => (
             <SwiperSlide key={movie.id}>
@@ -52,9 +64,6 @@ export default function Row({ isLargeLow, title, id, fetchUrl }) {
                 />
             </SwiperSlide>
           ))}
-        </div>
-        <div className="slider__arrow-right">
-          <span className="arrow">{">"}</span>
         </div>
       </Swiper>
 

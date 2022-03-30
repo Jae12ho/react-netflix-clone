@@ -115,6 +115,16 @@
     display: flex;
     align-items: center;
   }
+
+  .swiper-button-prev, .swiper-button-next {
+    color: white !important;
+    opacity: 0.8 !important;
+  }
+  .swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+  }
+
   @media screen and (min-width: 1200px) {
     .row__poster {
       max-height: 160px;
